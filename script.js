@@ -160,7 +160,7 @@ document.querySelectorAll('.contact-item').forEach(link => {
   });
 });
 
-// ===== LAZY LOAD IMAGES (if profile.jpg loads) =====
+// ===== LAZY LOAD IMAGES (if me.jpg loads) =====
 const profilePic = document.querySelector('.profile-pic');
 if (profilePic) {
   profilePic.addEventListener('load', function() {
