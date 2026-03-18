@@ -4,95 +4,245 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zeineb Romthana | AI Engineer</title>
-
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
 
   <!-- HERO -->
   <header class="hero">
-    <img src="profile.jpg" class="profile-pic" alt="Zeineb">
-
-    <h1>Hi, I'm Zeineb 👋</h1>
-    <h2>AI Engineer building RAG systems & intelligent agents</h2>
-
-    <div class="cta">
-      <a href="#projects">View Projects</a>
-      <a href="https://github.com/zeineb61romthana" target="_blank">GitHub</a>
+    <div class="hero-content">
+      <div class="profile-container">
+        <img src="profile.jpg" class="profile-pic" alt="Zeineb Romthana">
+        <div class="profile-badge">AI Engineer</div>
+      </div>
+      <h1 class="hero-title">Hi, I'm Zeineb 👋</h1>
+      <p class="hero-subtitle">Building production RAG systems, intelligent agents & scalable AI infrastructure</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/zeineb61romthana" target="_blank" class="btn btn-secondary">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <i class="fas fa-chevron-down"></i>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section class="fade-in">
-    <h2>About</h2>
-    <p>
-      I discovered AI through an IEEE event and became passionate about understanding how intelligent systems work.
-      Today, I build real-world AI systems using RAG, LLMs, and agent architectures focused on practical impact.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>SAP-B1 Assistant</h3>
-        <p>AI agent converting natural language into structured business queries.</p>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT -->
+    <section class="about fade-in">
+      <h2>About</h2>
+      <div class="about-content">
+        <p>
+          I discovered AI through an IEEE event and became passionate about understanding how intelligent systems work.
+          Today, I build production-grade AI systems using RAG, LLMs, and agentic architectures — focused on real-world impact, 
+          cost efficiency, and reliability.
+        </p>
+        <p class="highlight">
+          <strong>Currently:</strong> Architecting on-premises LLM infrastructure, optimizing inference pipelines, and scaling 
+          multi-agent platforms for commercial SaaS deployments.
+        </p>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>RAG Systems</h3>
-        <p>LLM pipelines with semantic retrieval for question answering.</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects fade-in">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="card-header">
+            <h3>Multi-Agent Platform</h3>
+            <span class="tag">Architecture</span>
+          </div>
+          <p>Orchestrator-based system routing across DevOps, FinOps, and IaC agents. Shared RAG layer with 19K+ chunks, 
+          LangGraph state management, and production-hardened error handling.</p>
+          <div class="card-footer">
+            <span class="tech">LangGraph</span>
+            <span class="tech">RAG</span>
+            <span class="tech">Python</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <h3>On-Premises LLM Infrastructure</h3>
+            <span class="tag">Infrastructure</span>
+          </div>
+          <p>Strategic migration from cloud inference (Groq) to private VPC deployment. A100 GPU planning, vLLM optimization, 
+          Qwen2.5-Coder quantization for IaC agents. ROI analysis: 18–24 month breakeven.</p>
+          <div class="card-footer">
+            <span class="tech">vLLM</span>
+            <span class="tech">GPU</span>
+            <span class="tech">OCI</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <h3>DevOps RAG Pipeline</h3>
+            <span class="tag">RAG & Retrieval</span>
+          </div>
+          <p>Production RAG with Qdrant vector DB, bge-base embeddings, and cross-encoder reranking on 349K chunks. 
+          Llama 3.3 70B integration with confidence-based routing and quality metrics tracking.</p>
+          <div class="card-footer">
+            <span class="tech">Qdrant</span>
+            <span class="tech">Embeddings</span>
+            <span class="tech">LLMs</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <h3>Observability & Cost Tracking</h3>
+            <span class="tag">Observability</span>
+          </div>
+          <p>Integrated Langfuse v3 for multi-tenant observability, Prometheus/Grafana for agent convergence metrics, 
+          and LiteLLM for token cost attribution across 5 specialized agents.</p>
+          <div class="card-footer">
+            <span class="tech">Langfuse</span>
+            <span class="tech">Prometheus</span>
+            <span class="tech">LiteLLM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <h3>Agent Parameter Framework</h3>
+            <span class="tag">System Design</span>
+          </div>
+          <p>Provider-agnostic parameter control across 5 domains: Execution, LLM, Tools, Memory, and RAG. 
+          Tiered service differentiation with user-facing quality toggles for Standard/Professional plans.</p>
+          <div class="card-footer">
+            <span class="tech">Config</span>
+            <span class="tech">SaaS</span>
+            <span class="tech">Design</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <h3>Token Economics & Billing</h3>
+            <span class="tag">Economics</span>
+          </div>
+          <p>Deep analysis of token attribution, prompt caching limitations, and SaaS pricing models. Designed billing 
+          architecture handling Tavily credits (~$29/month per user at 82% gross margin).</p>
+          <div class="card-footer">
+            <span class="tech">Billing</span>
+            <span class="tech">Analytics</span>
+            <span class="tech">Economics</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Fraud Detection</h3>
-        <p>End-to-end ML system with API deployment and dashboard.</p>
+    <!-- SKILLS -->
+    <section class="skills fade-in">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>AI/ML</h3>
+          <div class="skill-list">
+            <span class="skill-badge">LLMs</span>
+            <span class="skill-badge">RAG</span>
+            <span class="skill-badge">Agents</span>
+            <span class="skill-badge">LangChain</span>
+            <span class="skill-badge">LangGraph</span>
+            <span class="skill-badge">Transformers</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Infrastructure & Infra</h3>
+          <div class="skill-list">
+            <span class="skill-badge">vLLM</span>
+            <span class="skill-badge">GPU Optimization</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Kubernetes</span>
+            <span class="skill-badge">AWS/GCP/OCI</span>
+            <span class="skill-badge">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Data & Backend</h3>
+          <div class="skill-list">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">Vector DBs</span>
+            <span class="skill-badge">Qdrant</span>
+            <span class="skill-badge">Redis</span>
+            <span class="skill-badge">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Observability & Tools</h3>
+          <div class="skill-list">
+            <span class="skill-badge">Langfuse</span>
+            <span class="skill-badge">Prometheus</span>
+            <span class="skill-badge">Grafana</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">Linux</span>
+            <span class="skill-badge">Bash</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Facial Recognition</h3>
-        <p>Real-time CV system for attendance tracking.</p>
+    <!-- CURRENTLY WORKING ON -->
+    <section class="current fade-in">
+      <h2>Currently Focused On</h2>
+      <div class="focus-items">
+        <div class="focus-card">
+          <h3>🏗️ On-Premises Scaling</h3>
+          <p>Optimizing LLM inference costs and latency for production multi-agent deployments on private infrastructure.</p>
+        </div>
+        <div class="focus-card">
+          <h3>📊 Observability & Metrics</h3>
+          <p>Building comprehensive observability layers — token tracking, agent convergence, cost attribution, and performance monitoring.</p>
+        </div>
+        <div class="focus-card">
+          <h3>🔄 RAG Quality</h3>
+          <p>Improving retrieval quality through data curation, reranking strategies, and confidence-based routing.</p>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- CONTACT -->
+    <section class="contact fade-in">
+      <h2>Get In Touch</h2>
+      <p class="contact-intro">Let's talk about AI systems, infrastructure, or anything in between.</p>
+      <div class="contact-links">
+        <a href="mailto:zeinebromthana@gmail.com" class="contact-item" title="Email">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/zeineb61romthana" target="_blank" class="contact-item" title="GitHub">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/zeineb-romthana" target="_blank" class="contact-item" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
-  <!-- SKILLS -->
-  <section class="fade-in">
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Python</span>
-      <span>LLMs</span>
-      <span>RAG</span>
-      <span>LangChain</span>
-      <span>FAISS</span>
-      <span>Docker</span>
-      <span>GCP</span>
-    </div>
-  </section>
-
-  <!-- CURRENT -->
-  <section class="fade-in">
-    <h2>Currently Working On</h2>
-    <p>
-      Running LLMs locally, optimizing inference, and improving RAG pipelines.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="fade-in">
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="mailto:zeinebromthana@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/zeineb61romthana"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </section>
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & built by Zeineb • © 2025</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
