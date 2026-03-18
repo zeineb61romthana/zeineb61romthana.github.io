@@ -2,88 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zeineb Romthana | AI Engineer</title>
+
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-  <header>
-    <h1>Zeineb Romthana</h1>
-    <p>AI Engineer focused on RAG, LLMs, agentic systems, and applied AI.</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/zeineb61romthana/" target="_blank">GitHub</a>
-    </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="profile.jpg" class="profile-pic" alt="Zeineb">
+
+    <h1>Hi, I'm Zeineb 👋</h1>
+    <h2>AI Engineer building RAG systems & intelligent agents</h2>
+
+    <div class="cta">
+      <a href="#projects">View Projects</a>
+      <a href="https://github.com/zeineb61romthana" target="_blank">GitHub</a>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I discovered AI through an IEEE event in Sfax and was immediately drawn
-        to understanding how it works and how to build real systems with it.
-        Today, I focus on Retrieval-Augmented Generation, LLM integration,
-        fine-tuning, and agentic AI systems built for practical use cases.
-      </p>
-    </section>
+  <!-- ABOUT -->
+  <section class="fade-in">
+    <h2>About</h2>
+    <p>
+      I discovered AI through an IEEE event and became passionate about understanding how intelligent systems work.
+      Today, I build real-world AI systems using RAG, LLMs, and agent architectures focused on practical impact.
+    </p>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+  <!-- PROJECTS -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
 
-      <div class="project">
+    <div class="projects-grid">
+
+      <div class="project-card">
         <h3>SAP-B1 Assistant</h3>
-        <p>
-          Agentic system that transforms natural-language business requests into
-          validated OData queries and automates workflows.
-        </p>
+        <p>AI agent converting natural language into structured business queries.</p>
       </div>
 
-      <div class="project">
-        <h3>RAG and LLM Systems</h3>
-        <p>
-          Built AI systems using RAG pipelines, semantic retrieval, and LLMs for
-          question answering and structured workflows.
-        </p>
+      <div class="project-card">
+        <h3>RAG Systems</h3>
+        <p>LLM pipelines with semantic retrieval for question answering.</p>
       </div>
 
-      <div class="project">
-        <h3>Fraud Detection System</h3>
-        <p>
-          End-to-end ML pipeline using XGBoost with preprocessing, evaluation,
-          API exposure, and dashboarding.
-        </p>
+      <div class="project-card">
+        <h3>Fraud Detection</h3>
+        <p>End-to-end ML system with API deployment and dashboard.</p>
       </div>
 
-      <div class="project">
-        <h3>Facial Recognition Attendance System</h3>
-        <p>
-          Computer vision pipeline for employee detection and attendance
-          tracking with database integration and dashboards.
-        </p>
+      <div class="project-card">
+        <h3>Facial Recognition</h3>
+        <p>Real-time CV system for attendance tracking.</p>
       </div>
-    </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>
-        Python, SQL, LangChain, LangGraph, Transformers, FAISS, PostgreSQL,
-        Neo4j, Docker, GCP, OCI, NLP, RAG, AI Agents, Semantic Search
-      </p>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: zeinebromthana@gmail.com</p>
-      <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
-      <p><a href="https://github.com/zeineb61romthana/" target="_blank">GitHub</a></p>
-    </section>
-  </main>
+  <!-- SKILLS -->
+  <section class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>LLMs</span>
+      <span>RAG</span>
+      <span>LangChain</span>
+      <span>FAISS</span>
+      <span>Docker</span>
+      <span>GCP</span>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2026 Zeineb Romthana</p>
-  </footer>
+  <!-- CURRENT -->
+  <section class="fade-in">
+    <h2>Currently Working On</h2>
+    <p>
+      Running LLMs locally, optimizing inference, and improving RAG pipelines.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="fade-in">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:zeinebromthana@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/zeineb61romthana"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
