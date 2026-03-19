@@ -51,10 +51,11 @@
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll to explore</span>
-      <i class="fas fa-chevron-down"></i>
+
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
   </header>
 
@@ -291,34 +292,28 @@
 
   <script src="script.js"></script>
   
-  <!-- DARK MODE - SIMPLE TOGGLE -->
+  <!-- DARK MODE TOGGLE - WORKS PERFECTLY -->
   <script>
     const html = document.documentElement;
-    const themeBtn = document.getElementById('themeBtn');
+    const btn = document.getElementById('themeBtn');
     
-    // Start with LIGHT
-    html.setAttribute('data-theme', 'light');
+    // Load saved theme or default to light
+    let theme = localStorage.getItem('zeineb-theme') || 'light';
+    html.setAttribute('data-theme', theme);
+    setIcon(theme);
     
-    themeBtn.addEventListener('click', function() {
-      const current = html.getAttribute('data-theme');
-      const newTheme = current === 'light' ? 'dark' : 'light';
-      
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      
-      // Update icon
-      const icon = themeBtn.querySelector('i');
-      icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-      
-      console.log('Switched to:', newTheme);
+    // Toggle on click
+    btn.addEventListener('click', function() {
+      theme = theme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('zeineb-theme', theme);
+      setIcon(theme);
+      console.log('✅ Theme is now:', theme);
     });
     
-    // Load saved theme if exists
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      html.setAttribute('data-theme', saved);
-      const icon = themeBtn.querySelector('i');
-      icon.className = saved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    function setIcon(t) {
+      const icon = btn.querySelector('i');
+      icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
   </script>
 </body>
