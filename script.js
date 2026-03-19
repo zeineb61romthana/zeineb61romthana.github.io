@@ -1,32 +1,45 @@
-// Dark Mode Toggle
-document.addEventListener('DOMContentLoaded', function() {
+// Dark Mode Toggle - Simple & Reliable
+function initTheme() {
   const themeBtn = document.getElementById('themeBtn');
-  const htmlElement = document.documentElement;
+  const html = document.documentElement;
   
+  // Get saved theme or default to light
   const savedTheme = localStorage.getItem('theme') || 'light';
-  htmlElement.setAttribute('data-theme', savedTheme);
-  updateThemeIcon(savedTheme);
+  html.setAttribute('data-theme', savedTheme);
+  updateIcon(savedTheme);
   
-  themeBtn.addEventListener('click', function() {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-  });
-  
-  function updateThemeIcon(theme) {
-    const icon = themeBtn.querySelector('i');
-    if (theme === 'dark') {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
+  // Toggle on click
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateIcon(newTheme);
+    });
   }
-});
+}
+
+function updateIcon(theme) {
+  const icon = document.querySelector('#themeBtn i');
+  if (!icon) return;
+  
+  if (theme === 'dark') {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+}
+
+// Initialize immediately and on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTheme);
+} else {
+  initTheme();
+}
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
